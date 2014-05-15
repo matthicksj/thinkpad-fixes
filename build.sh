@@ -8,9 +8,6 @@ mkdir -p /tmp/mba-repo
 
 tito build --rpm --output=/tmp/mba-repo
 
-cd ../oncloud-repo
-tito build --rpm --output=/tmp/mba-repo
-
 cd /tmp/mba-repo
 mkdir SRPMS
 mv *.src.rpm SRPMS
