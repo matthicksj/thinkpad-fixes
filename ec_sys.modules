@@ -1,0 +1,5 @@
+#!/bin/sh
+
+if [ ! -c /sys/kernel/debug/ec/ec0/io ] ; then
+        exec /sbin/modprobe ec_sys >/dev/null 2>&1
+fi
