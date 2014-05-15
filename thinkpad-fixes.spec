@@ -1,5 +1,5 @@
 Name:		thinkpad-fixes	
-Version:	0.2
+Version:	0.3
 Release:	1%{?dist}
 Summary:	Various configuration fixes for running Fedora on a Thinkpad X1 Carbon
 Group:		System Environment/Base
@@ -46,6 +46,13 @@ rm -rf %{buildroot}
 %{_sysconfdir}/yum.repos.d/f21-gnome.repo
 
 %changelog
+* Thu May 15 2014 Matt Hicks <matthicksj@gmail.com> 0.3-1
+- Fix (matthicksj@gmail.com)
+- Removing synaptics from build (matthicksj@gmail.com)
+- Adding synaptics rebuild (matthicksj@gmail.com)
+- Making scripts consistently require sudo (matthicksj@gmail.com)
+- Fixing buildroot locations (matthicksj@gmail.com)
+
 * Thu May 15 2014 Matt Hicks <matthicksj@gmail.com> 0.2-1
 - new package built with tito
 
