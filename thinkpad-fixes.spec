@@ -30,6 +30,9 @@ cp brightness %{buildroot}%{_bindir}
 mkdir -p %{buildroot}%{_sysconfdir}/yum.repos.d/
 cp f21-gnome.repo %{buildroot}%{_sysconfdir}/yum.repos.d/
 
+mkdir -p %{buildroot}/usr/share/X11/xorg.conf.d
+cp 80-touchpad.conf %{buildroot}/usr/share/X11/xorg.conf.d
+
 # Load the ec_sys module on boot for the backlight fix to work
 mkdir -p %{buildroot}%{_sysconfdir}/sysconfig/modules/
 cp ec_sys.modules %{buildroot}%{_sysconfdir}/sysconfig/modules/
@@ -44,6 +47,7 @@ rm -rf %{buildroot}
 %attr(755, root, root) %{_bindir}/brightness
 %attr(755, root, root) %{_sysconfdir}/sysconfig/modules/ec_sys.modules
 %{_sysconfdir}/yum.repos.d/f21-gnome.repo
+/usr/share/X11/xorg.conf.d/80-touchpad.conf
 
 %changelog
 * Thu May 15 2014 Matt Hicks <matthicksj@gmail.com> 0.3-1
