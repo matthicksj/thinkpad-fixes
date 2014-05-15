@@ -2,14 +2,6 @@
 
 pushd `dirname $0` > /dev/null
 
-echo "Rebuilding synaptics RPM"
-mkdir -p synaptics
-cd synaptics
-wget http://kojipkgs.fedoraproject.org//packages/xorg-x11-drv-synaptics/1.8.0/2.fc21/src/xorg-x11-drv-synaptics-1.8.0-2.fc21.src.rpm
-rpmbuild --rebuild xorg-x11-drv-synaptics-1.8.0-2.fc21.src.rpm
-cd ..
-rm -rf synaptics
-
 echo "Building RPMs with tito"
 rm -rf /tmp/mba-repo
 mkdir -p /tmp/mba-repo
@@ -43,9 +35,6 @@ rm files.tar.gz
 # Now merge the yum repository with the content
 mkdir -p repo/php/yum
 cp -r /tmp/mba-repo/* repo/php/yum
-
-# Merge in the synaptics RPMS
-cp ~/rpmbuild/RPMS/x86_64/xorg-x11-drv-synaptics-* repo/php/yum
 
 tar -cvf /tmp/mba-repo/files.tar *
 gzip /tmp/mba-repo/files.tar
