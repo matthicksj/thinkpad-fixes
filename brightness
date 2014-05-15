@@ -2,16 +2,16 @@
 
 case $1 in
 "dim"*)
-  sudo su -c "echo 100 > /sys/class/backlight/intel_backlight/brightness"
+  echo 100 > /sys/class/backlight/intel_backlight/brightness
   ;;
 "normal")
-  sudo su -c "echo 400 > /sys/class/backlight/intel_backlight/brightness"
+  echo 400 > /sys/class/backlight/intel_backlight/brightness
   ;;
 "bright")
-  sudo su -c "echo 851 > /sys/class/backlight/intel_backlight/brightness"
+  echo 851 > /sys/class/backlight/intel_backlight/brightness
   ;;
 *)
-  echo "Usage: brightness.sh {dim|normal|bright}"
+  echo "Usage: brightness.sh (dim|normal|bright)"
   exit 1
   ;;
 esac
