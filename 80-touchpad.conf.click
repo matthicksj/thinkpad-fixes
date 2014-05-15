@@ -27,7 +27,7 @@ Section "InputClass"
 
     # Easy to touch, no pressure to register letting go
     Option "FingerLow" "10"
-    Option "FingerHigh" "40"
+    Option "FingerHigh" "20"
  
     # prevents too many intentional clicks
     Option "PalmDetect" "0"
@@ -41,11 +41,21 @@ Section "InputClass"
     Option "PressureMotionMaxFactor" "3"
 
     # Reduce Noise
-    Option "HorizHysteresis" "15"
-    Option "VertHysteresis" "15"
+    Option "HorizHysteresis" "25"
+    Option "VertHysteresis" "25"
  
-    Option "MinSpeed" "1"
-    Option "MaxSpeed" "4"
-    Option "AccelerationProfile" "0.08"
+    Option "MinSpeed" "0.5"
+    Option "MaxSpeed" "1.8"
+    Option "AccelerationProfile" "0.015"
     Option "ConstantDeceleration" "4"
+
+    # Clean up settings not needed
+    Option "MaxTapMove" "0"
+    Option "MaxTapTime" "0"
+    Option "MaxDoubleTapTime" "0"
+    Option "MaxSingleTapTime" "0"
+    Option "SingleTapTimeout" "0"
+    Option "MaxTapMove" "0"
+    Option "MaxTapMove" "0"
+    Option "SoftButtonAreas"  "0 0 0 0 0 0 0 0"
 EndSection
