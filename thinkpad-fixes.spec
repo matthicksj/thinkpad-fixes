@@ -27,12 +27,12 @@ mkdir -p %{buildroot}%{_bindir}
 cp backlight %{buildroot}%{_bindir}
 cp brightness %{buildroot}%{_bindir}
 
-mkdir -p %{_sysconfdir}/yum.repos.d/
-cp f21-gnome.repo %{_sysconfdir}/yum.repos.d/
+mkdir -p %{buildroot}%{_sysconfdir}/yum.repos.d/
+cp f21-gnome.repo %{buildroot}%{_sysconfdir}/yum.repos.d/
 
 # Load the ec_sys module on boot for the backlight fix to work
-mkdir -p %{_sysconfdir}/sysconfig/modules/
-cp ec_sys.modules %{_sysconfdir}/sysconfig/modules/
+mkdir -p %{buildroot}%{_sysconfdir}/sysconfig/modules/
+cp ec_sys.modules %{buildroot}%{_sysconfdir}/sysconfig/modules/
 
 %clean
 rm -rf %{buildroot}
