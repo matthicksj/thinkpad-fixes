@@ -34,10 +34,10 @@ Section "InputClass"
  
     # "natural" vertical and horizontal scrolling
     Option "VertTwoFingerScroll" "1"
-    Option "VertScrollDelta" "75"
+    Option "VertScrollDelta" "45"
     Option "HorizTwoFingerScroll" "1"
-    Option "HorizScrollDelta" "75"
-    Option "CoastingFriction" "100"
+    Option "HorizScrollDelta" "45"
+    Option "CoastingFriction" "35"
     Option "PressureMotionMaxFactor" "3"
 
     # Reduce Noise
@@ -45,8 +45,8 @@ Section "InputClass"
     Option "VertHysteresis" "25"
  
     Option "MinSpeed" "0.5"
-    Option "MaxSpeed" "1.8"
-    Option "AccelerationProfile" "0.015"
+    Option "MaxSpeed" "1.2"
+    Option "AccelFactor" "0.05"
     Option "ConstantDeceleration" "4"
 
     # Clean up settings not needed
