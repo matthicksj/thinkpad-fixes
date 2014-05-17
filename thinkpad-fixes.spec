@@ -27,6 +27,9 @@ mkdir -p %{buildroot}%{_bindir}
 cp backlight %{buildroot}%{_bindir}
 cp brightness %{buildroot}%{_bindir}
 
+mkdir -p %{buildroot}%{_sysconfdir}/X11/xinit/xinitrc.d
+cp syndaemon.sh %{buildroot}%{_sysconfdir}/X11/xinit/xinitrc.d
+
 mkdir -p %{buildroot}%{_sysconfdir}/yum.repos.d/
 cp f21-gnome.repo %{buildroot}%{_sysconfdir}/yum.repos.d/
 
@@ -46,6 +49,7 @@ rm -rf %{buildroot}
 %attr(755, root, root) %{_bindir}/backlight
 %attr(755, root, root) %{_bindir}/brightness
 %attr(755, root, root) %{_sysconfdir}/sysconfig/modules/ec_sys.modules
+%attr(755, root, root) %{_sysconfdir}/X11/xinit/xinitrc.d/syndaemon.sh
 %{_sysconfdir}/yum.repos.d/f21-gnome.repo
 /usr/share/X11/xorg.conf.d/80-touchpad.conf
 
