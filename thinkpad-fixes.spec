@@ -1,5 +1,5 @@
 Name:		thinkpad-fixes	
-Version:	0.6
+Version:	0.7
 Release:	1%{?dist}
 Summary:	Various configuration fixes for running Fedora on a Thinkpad X1 Carbon
 Group:		System Environment/Base
@@ -54,6 +54,9 @@ rm -rf %{buildroot}
 /usr/share/X11/xorg.conf.d/80-touchpad.conf
 
 %changelog
+* Sat May 17 2014 Matt Hicks <matthicksj@gmail.com> 0.7-1
+- Adding syndaemon setup (matthicksj@gmail.com)
+
 * Sat May 17 2014 Matt Hicks <matthicksj@gmail.com> 0.6-1
 - Touchpad tweaks (matthicksj@gmail.com)
 - More tweaks (matthicksj@gmail.com)
