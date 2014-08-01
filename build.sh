@@ -14,7 +14,6 @@ mv *.src.rpm SRPMS
 mkdir RPMS
 mv x86_64 RPMS
 rm *.tar.gz
-createrepo .
 
 # Now merge with the OpenShift application
 rm -rf /tmp/working
@@ -32,6 +31,11 @@ rm files.tar.gz
 # Now merge the yum repository with the content
 mkdir -p repo/php/yum
 cp -r /tmp/mba-repo/* repo/php/yum
+
+# Create the repo from the merged content
+pushd repo/php/yum
+createrepo .
+popd
 
 tar -cvf /tmp/mba-repo/files.tar *
 gzip /tmp/mba-repo/files.tar
